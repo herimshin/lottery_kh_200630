@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>행운의복권</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="lotteryScratch.js"></script>
+  <script>
+    window.addEventListener('load', function () {
+
+      // example 1
+      var lotteryScratchGo1 = new lotteryScratch(
+        document.querySelector('#lotteryScratch1'), 390, 205, 20,
+        'demo_before.jpg',
+      );
+
+      lotteryScratchGo1
+        .LotteryScratchInit()
+        .LotteryScratchCallback(function () {
+          document.querySelector('#lotteryScratch1').style.backgroundImage = "url('demo_result.png')";
+
+          // document.querySelector('#lotteryScratch1').style.textalign="center";
+
+        }).LotteryScratch();
+
+        // var c = document.getElementById("lotteryScratch1");
+        // var ctx = c.getContext("2d");
+        // ctx.textAlign = "center";
+
+    });
+  </script>
+</head>
+
+<body>
+  <div class="helper">
+    <img src="demo_banner.png" alt="banner">
+
+    <div id="lotteryScratch1"></div>
+    <img src="demo_contact.png" alt="contact">
+  </div>
+
+</body>
+
+</html>
